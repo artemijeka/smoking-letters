@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smoking letters | Дымящие буквы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <article class="smoking-letters__container">
+
+    <p class="smoking-letters">
+      ЗАГРУЗКА...
+    </p>
+
+  </article>
+
+  <script>
+    var text = document.querySelector('.smoking-letters');
+    text.innerHTML = text.textContent.replace(/\S/g, '<span class="smoking-letters__letter">$&</span>');
+
+    var letters = document.querySelectorAll('.smoking-letters__letter');
+    // console.log(letters);
+
+    letters.forEach(function(el,i,nodeList){
+      el.addEventListener('mouseover', function () {
+        el.classList.add('smoke');
+      });
+    });
+  </script>
+
+
+
+</body>
+
+</html>
