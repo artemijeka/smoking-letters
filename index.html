@@ -26,7 +26,6 @@
     text.innerHTML = text.textContent.replace(/\S/g, '<span class="smoking-letters__letter">$&</span>');
 
     var letters = document.querySelectorAll('.smoking-letters__letter');
-    // console.log(letters);
 
     letters.forEach(function(el,i,nodeList){
       el.addEventListener('mouseover', function () {
